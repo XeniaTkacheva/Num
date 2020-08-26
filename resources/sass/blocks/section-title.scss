@@ -1,0 +1,21 @@
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+
+  &--small {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: $bp-tablets) {
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: $bp-phones) {
+  .section-title {
+    font-size: 24px;
+    line-height: 48px;
+  }
+}

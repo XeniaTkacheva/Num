@@ -3,8 +3,15 @@
 
 // Variables
 @import 'variables';
-@import "overall";
-@import "blocks/wecome";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Blocks
+@import "overall";
+@import "blocks/wecome";
+@import "blocks/hero";
+@import "blocks/main-nav";
+@import "blocks/page-footer";
+@import "blocks/page-header";
+@import "blocks/section-title";

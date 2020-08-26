@@ -1,6 +1,10 @@
 // Body
 $body-bg: #f8fafc;
 
+$bg-color-light: #d7dff4;
+$bg-color-blue: #a5c4f3;
+$bg-color-dark: #1f232d;
+
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
@@ -17,3 +21,27 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$color-light: #eaeaea;
+$color-indigo: #5500f2;
+$color-lila: #ad00ed;
+$color-lila-hover: #9d00ff;
+
+$text-color: #414c63;
+$text-color-dark: #2d3c4e;
+
+// Break-points
+
+$mobile-only-width: 767px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$bp-desktop-hd: 1800px;
+$bp-desktop-big: 1480px;
+$bp-desktop: 1200px;
+$bp-desktop-small: 1080px;
+$bp-tablets-big: 900px;
+$bp-tablets: 768px;
+$bp-phones: 480px;

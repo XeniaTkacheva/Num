@@ -1,0 +1,135 @@
+.bg1 {
+    background-color: #8f8f8f;
+    background-image: url("images/Gradient_all.png"),  linear-gradient(to left, rgba(0,0,0,.5) ,rgba(0,0,0,.5)), url("../images/Background.jpg");
+    background-size: auto 100% , cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center,  center, center;
+    height: 100vh;
+    //a {
+    //    color: white;
+    //}
+
+
+}
+.hero {
+    position: relative;
+}
+
+.hero__wrapper {
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr 80px;
+    grid-template-areas: "header" "content" "button";
+    align-items: center;
+}
+
+.hero__title {
+    display: block;
+    text-align: center;
+}
+
+.hero__name {
+    display: block;
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.hero__desc {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    opacity: 0.4;
+}
+
+.hero__btn {
+    display: flex;
+    justify-content: center;
+    align-self: start;
+}
+
+@media screen and (max-width: $bp-desktop) {
+    .hero__wrapper {
+        width: 90%;
+        max-width: 1080px;
+        grid-template-rows: min-content 1fr 150px;
+    }
+
+    .hero__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__name {
+        padding-left: 50px;
+    }
+
+    .hero__desc {
+        text-align: right;
+    }
+
+    .hero__btn {
+        align-self: center;
+    }
+
+    .hero__parallax {
+        display: none;
+    }
+
+    .hero__bg {
+        display: block;
+    }
+}
+
+@media screen and (max-width: $bp-tablets) {
+    .hero__wrapper {
+        width: 90%;
+        max-width: 688px;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(150px, max-content) 1fr;
+        grid-template-areas: "header" "content";
+    }
+
+    .hero__title {
+        display: block;
+        align-self: start;
+        margin-top: 120px;
+    }
+
+    .hero__name {
+        padding-left: 0;
+        font-size: 48px;
+    }
+
+    .hero__desc {
+        text-align: center;
+    }
+
+    .hero__btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $bp-phones) {
+    .hero__wrapper {
+        justify-content: center;
+        min-width: 260px;
+    }
+
+    .hero__title {
+        margin-top: 65px;
+        text-align: center;
+    }
+
+    .hero__name {
+        font-size: 36px;
+        line-height: 54px;
+    }
+
+    .hero__desc {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
