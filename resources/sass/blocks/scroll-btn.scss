@@ -1,0 +1,26 @@
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: $color-light;
+  font-size: 18px;
+
+  &:hover {
+    color: $bg-color-blue;
+  }
+
+  &:active {
+    color: rgba($bg-color-blue, 0.5);
+  }
+}
+
+.scroll-btn__icon {
+  fill: currentColor;
+  margin-left: 11px;
+}
+
+@media screen and (max-width: $bp-tablets) {
+  .scroll-btn {
+    display: none;
+  }
+}

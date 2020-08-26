@@ -1,7 +1,7 @@
 .page-header {
   grid-area: header;
   display: grid;
-  grid-template: "logo menu" minmax(100px, max-content)
+  grid-template: "logo menu" minmax(80px, max-content)
                   / 32fr 135fr;
   align-items: center;
   padding: 25px 0 0;
@@ -21,7 +21,7 @@
 .page-header__menu {
   grid-area: menu;
   display: grid;
-  grid-template: "navbar social" minmax(100px, max-content)
+  grid-template: "navbar social" minmax(80px, max-content)
                   / 100fr 35fr;
   align-items: center;
   position: relative;
@@ -141,9 +141,9 @@
       cursor: pointer;
 
       &::after {
-        background-color: rgba($color-indigo, 0.6);
-        box-shadow: 0 8px 0 0 rgba($color-indigo, 0.6),
-        0 16px 0 0 rgba($color-indigo, 0.6);
+        background-color: rgba($bg-color-blue, 0.6);
+        box-shadow: 0 8px 0 0 rgba($bg-color-blue, 0.6),
+        0 16px 0 0 rgba($bg-color-blue, 0.6);
       }
     }
   }

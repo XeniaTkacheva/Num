@@ -1,0 +1,248 @@
+
+
+.form__set {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+
+  &--message {
+    line-height: 30px;
+    position: relative;
+  }
+}
+
+.form__user-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 30px;
+}
+
+.form__user-name,
+.form__user-email {
+  width: 45%;
+  position: relative;
+}
+
+.form__label {
+  display: block;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+  opacity: 0.3;
+  padding-left: 40px;
+}
+
+.form__input-block {
+  display: flex;
+  box-sizing: border-box;
+  color: $text-color;
+  align-items: center;
+}
+
+.form__area-block {
+  padding: 0;
+}
+
+.form__input-block,
+.form__area-block {
+  position: relative;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bg-color-blue;
+
+    .form__icon {
+      fill: $bg-color-blue;
+      opacity: 1;
+    }
+
+    .form__input,
+    .form__message {
+      &::placeholder {
+        color: $bg-color-blue;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form__icon-wrapper {
+  display: block;
+  width: 30px;
+  flex-shrink: 0;
+
+  &--message {
+    margin-top: 30px;
+  }
+}
+
+.form__icon {
+  fill: $text-color;
+  opacity: 0.3;
+
+
+}
+
+.form__input,
+.form__message {
+  background: transparent;;
+  border: none;
+  color: currentColor;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 48px;
+  width: 100%;
+  padding: 10px 15px 10px 0;
+  margin-left: 15px;
+
+  &::placeholder {
+    color: currentColor;
+    opacity: 0.3;
+  }
+}
+
+.form__message {
+  padding: 7px 15px 0;
+}
+
+.form__area-block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form__tooltip {
+  display: block;
+  //display: none;
+  position: absolute;
+  left: 45px;
+  bottom: 0;
+  transform: translateY(100%);
+  background: $color-alarm;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 3px 15px;
+  opacity: 0;
+
+  &:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateY(-100%);
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: transparent transparent $color-alarm;
+    border-style: solid;
+    border-width: 0 8px 7px;
+  }
+}
+
+.form__user-name.error .form__tooltip,
+.form__user-email.error .form__tooltip,
+.form__set--message.error .form__tooltip {
+  opacity: 1;
+}
+
+.form__user-name.error .form__icon,
+.form__user-email.error .form__icon,
+.form__set--message.error .form__icon {
+  fill: $color-alarm;
+  opacity: 1;
+}
+
+.form__btn {
+  margin-top: 50px;
+  color: white;
+  background: $bg-color-blue linear-gradient(to right, $color-lila, $bg-color-blue 80%);
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-width: 350px;
+  padding: 18px 20px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+
+  &:hover {
+    background-image: linear-gradient(to right, #9d00ff, #5900ff, #5500f2);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: $bp-desktop) {
+  .form__btn {
+    margin-top: 54px;
+    padding: 16px 18px;
+  }
+}
+
+@media screen and (max-width: $bp-tablets) {
+  .form__message {
+    font-size: 14px;
+    line-height: 24px;
+
+  }
+  .form__user-data,
+  .form__input {
+      font-size: 14px;
+      line-height: 30px;
+  }
+}
+@media screen and (max-width: $bp-phones) {
+  .form__user-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__icon {
+    display: none;
+  }
+
+  .form__message {
+    height: 120px;
+    font-size: 14px;
+    line-height: 24px;
+
+  }
+  .form__user-name,
+  .form__user-email {
+    margin-bottom: 10px;
+    width: 100%;
+
+  }
+  .form__btn {
+    margin-top: 30px;
+    font-size: 16px;
+    width: 100%;
+    min-width: 260px;
+    padding: 5px 20px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    &:hover {
+      background-image: linear-gradient(to right, #9d00ff, #5900ff, #5500f2);
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}

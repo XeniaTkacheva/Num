@@ -1,0 +1,33 @@
+.about {
+    box-sizing: border-box;
+    background: $bg-color-dark;
+    min-height: 30vh;
+    padding: 100px 0 60px;
+}
+
+.about__title {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    display: block;
+    font-size: 32px;
+    line-height: 50px;
+    font-weight: 500;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 4px;
+}
+
+.about__desc {
+    //font-family: 'Cormorant Unicase', serif;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 100;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    text-transform: none;
+    color: white;
+
+}

@@ -1,0 +1,21 @@
+.contact {
+    box-sizing: border-box;
+    background: white;
+    min-height: 40vh;
+    padding: 100px 0 60px;
+    color: $text-color-dark;
+    border-bottom: $bg-color-blue solid 10px;
+}
+
+.contact__title {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    display: block;
+    font-size: 32px;
+    line-height: 50px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 4px;
+}

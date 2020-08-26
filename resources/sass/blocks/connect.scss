@@ -1,0 +1,46 @@
+.connect__wrapper {
+  min-height: 50vh;
+  padding: 85px 0 135px;
+}
+
+.connect__title {
+  padding-bottom: 70px;
+}
+
+.connect__form {
+  width: 100%;
+  max-width: 860px;
+}
+
+@media screen and (max-width: $bp-desktop) {
+  .connect__wrapper {
+    max-width: 1200px;
+    width: 90%;
+    padding: 50px 0 160px;
+  }
+}
+
+@media screen and (max-width: $bp-tablets) {
+  .connect__wrapper {
+    max-width: 768px;
+    width: 95%;
+    padding: 50px 0 160px;
+    text-align: center;
+  }
+  .connect__form {
+    width: 100%;
+  }
+  .form__set {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: $bp-phones) {
+  .connect__wrapper {
+    min-width: 320px;
+    width: 100%;
+    padding: 50px 30px 100px;
+    text-align: left;
+  }
+
+}

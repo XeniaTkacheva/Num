@@ -1,17 +1,30 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@100&family=Raleway:wght@100;300;500;700;900&display=swap");
 
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 
 // Blocks
 @import "overall";
-@import "blocks/wecome";
+//@import "blocks/welcome";
 @import "blocks/hero";
 @import "blocks/main-nav";
 @import "blocks/page-footer";
 @import "blocks/page-header";
 @import "blocks/section-title";
+@import "blocks/auth-nav";
+@import "blocks/connect";
+@import "blocks/social";
+@import "blocks/form";
+@import "blocks/bootstrap-my";
+@import "blocks/login";
+@import "blocks/about";
+@import "blocks/scroll-btn";
+@import "blocks/aphorism";
+@import "blocks/contact";
+

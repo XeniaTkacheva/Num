@@ -4,13 +4,14 @@
     background-size: auto 100% , cover, cover;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center,  center, center;
-    height: 100vh;
-    //a {
-    //    color: white;
-    //}
-
-
+    min-height: 100vh;
 }
+
+.bg {
+    background-color: $bg-color-blue;
+    min-height: 40vh;
+}
+
 .hero {
     position: relative;
 }
@@ -28,19 +29,26 @@
 .hero__title {
     display: block;
     text-align: center;
+    color: white;
+
 }
 
 .hero__name {
     display: block;
-    font-size: 72px;
-    font-weight: 800;
+    font-size: 76px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 5px;
 }
 
 .hero__desc {
+    font-family: 'Cormorant Unicase', serif;
     font-size: 18px;
-    line-height: 30px;
-    font-weight: 600;
-    opacity: 0.4;
+    line-height: 40px;
+    font-weight: 100;
+    opacity: 0.9;
+    letter-spacing: 10px;
 }
 
 .hero__btn {
