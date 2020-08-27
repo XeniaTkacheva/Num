@@ -1,7 +1,6 @@
 // Fonts
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
 //@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@100&family=Raleway:wght@100;300;500;700;900&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@100&family=Raleway:wght@100;300;500;700;900&display=swap");
 
 // Variables
 @import 'variables';
@@ -22,9 +21,12 @@
 @import "blocks/social";
 @import "blocks/form";
 @import "blocks/bootstrap-my";
-@import "blocks/login";
+//@import "blocks/login";
 @import "blocks/about";
 @import "blocks/scroll-btn";
 @import "blocks/aphorism";
 @import "blocks/contact";
+@import "blocks/portfolio";
+@import "blocks/features";
+
 

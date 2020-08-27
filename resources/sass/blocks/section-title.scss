@@ -1,21 +1,27 @@
 .section-title {
-  font-size: 36px;
-  font-weight: 700;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 4px;
 
-  &--small {
-    font-size: 30px;
-  }
+    &--small {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: $bp-tablets) {
-  .section-title {
-    font-size: 30px;
-  }
+    .section-title {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: $bp-phones) {
-  .section-title {
-    font-size: 24px;
-    line-height: 48px;
-  }
+    .section-title {
+        font-size: 24px;
+        line-height: 48px;
+    }
 }

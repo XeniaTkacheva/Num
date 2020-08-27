@@ -14,7 +14,8 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-{{--    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap" rel="stylesheet">--}}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,9 +23,7 @@
 <body>
 @include('inc.sprite')
     <div id="app">
-        @if(Route::is(!'main'))
-            @include('layouts.menu.header')
-        @endif
+
         <main @if(Route::is(!'home')) class="bg1" @else class="bg" @endif >
 
             <!-- Content Lending Page -->
@@ -33,7 +32,7 @@
 
         </main>
         <!-- Footer -->
-        @include('layouts.footer.footer')
+        @include('sections.footer')
     </div>
 </body>
 </html>

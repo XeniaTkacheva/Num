@@ -1,26 +1,27 @@
 .scroll-btn {
-  display: flex;
-  align-items: center;
-  background: transparent;
-  color: $color-light;
-  font-size: 18px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: $color-light;
+    font-size: 18px;
+    transition: all 0.5s ease-in;
 
-  &:hover {
-    color: $bg-color-blue;
-  }
+    &:hover {
+        color: $bg-color-blue;
+    }
 
-  &:active {
-    color: rgba($bg-color-blue, 0.5);
-  }
+    &:active {
+        color: rgba($bg-color-blue, 0.5);
+    }
 }
 
 .scroll-btn__icon {
-  fill: currentColor;
-  margin-left: 11px;
+    fill: currentColor;
+    margin-left: 11px;
 }
 
 @media screen and (max-width: $bp-tablets) {
-  .scroll-btn {
-    display: none;
-  }
+    .scroll-btn {
+        display: none;
+    }
 }

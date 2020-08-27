@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('layouts.menu.header')
+    @include('sections.header')
 
 <div class="container bg">
     <div class="row justify-content-center">
