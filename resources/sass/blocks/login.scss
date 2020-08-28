@@ -5,10 +5,21 @@
 //- Overlay ====================  LOGIN  ===
 .login {
     height: 100vh;
-    display: grid;
+    //display: grid;
     background: url('images/Background.jpg') 50% 50% / cover;
     color: $text-color;
-    position: relative; //- временно
+    position: relative;
+
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-image: linear-gradient(to right, rgba(0,0,0, 0.40), rgba(0,0,0, 0.20));
+    }
 }
 
 .login__overlay {
@@ -27,9 +38,11 @@
 }
 
 .login__modal {
+    display: block;
+    margin: 0 auto;
     width: 560px;
     min-height: 517px;
-    background: #ffffff;
+    background: rgba($bg-color-dark, 0.8);
 }
 
 //- Overlay ====================== FORM ===
@@ -46,9 +59,10 @@
     display: block;
     margin: 0 0 10px;
     padding: 0;
-    font-size: 36px;
+    font-size: 32px;
+    color: $text-white;
     line-height: 60px;
-    font-weight: 600;
+    font-weight: 300;
     text-align: center;
 }
 
@@ -63,21 +77,17 @@
     display: block;
     box-sizing: border-box;
     margin-bottom: 20px;
-    padding-left: 50px;
     position: relative;
-    background-position: bottom 10px left 0;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
     border-bottom: 2px solid $text-color;
     color: $text-color;
 
     &:hover,
     &:focus {
-        border-bottom: 2px solid $color-lila-hover;
+        border-bottom: 2px solid $bg-color-blue-hover;
     }
 
     &--login {
-        background-image: svg-load("user.svg", fill="$text-color", opacity="0.5");
+
 
         &:hover,
         &:focus {
@@ -99,10 +109,39 @@
     display: block;
     font-size: 16px;
     line-height: 30px;
-    font-weight: 600;
+    font-weight: 300;
     opacity: 0.3;
     padding: 10px 0 0;
+
+    &--check {
+        display: block;
+        padding: 0;
+        cursor: pointer;
+    }
 }
+
+.login-form__input-block {
+    display: flex;
+
+    &:hover {
+        .login-form__user-icon,
+        .login-form__envelope-icon,
+        .login-form__link-icon {
+            fill: $bg-color-blue-hover;
+        }
+        .login-form__input {
+            color: $bg-color-blue-hover;
+        }
+    }
+}
+
+.login-form__user-icon,
+.login-form__envelope-icon,
+.login-form__link-icon {
+    fill: $text-color;
+    padding: 15px 20px 0 0;
+}
+
 
 .login-form__input {
     display: block;
@@ -113,16 +152,59 @@
     line-height: 48px;
     border: none;
     color: $text-color;
+    background: transparent;
 
-    &:hover,
-    &focus {
-        color: $color-lila-hover;
+    &--check {
+        display: flex;
+        width: auto;
+        margin-right: 15px;
+        padding: 0;
     }
+
+    //&:hover,
+    //&focus {
+    //    color: $bg-color-blue-hover;
+    //}
 
     &::placeholder {
         color: currentColor;
-        opacity: 0.3;
+        opacity: 0.5;
     }
+}
+.login-form__checkbox,
+.login-form__forgot {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    cursor: pointer;
+
+    a {
+        color: $text-color;
+        text-transform: none;
+        display: block;
+        margin-left: auto;
+    }
+
+    &:hover {
+        color: $bg-color-blue-hover;
+        cursor: pointer;
+
+        a {
+            color: $bg-color-blue-hover
+        }
+    }
+}
+
+.login-form__forgot {
+    text-transform: none;
+}
+
+.login-form__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 //- Overlay ====================== BTN ===
@@ -130,18 +212,16 @@
     border: none;
     margin-top: 50px;
     color: white;
-    background: $bg-color-blue linear-gradient(to right, $color-lila, $bg-color-blue 80%);
+    background: $bg-color-blue linear-gradient(to right, $bg-color-blue-hover, $bg-color-blue 80%);
     font-size: 18px;
-    line-height: 48px;
-    font-weight: 800;
+    line-height: 25px;
+    font-weight: 500;
     text-transform: uppercase;
-    min-width: 350px;
-    padding: 18px 20px;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 50px;
+    min-width: 250px;
+    padding: 10px 10px;
 
     &:hover {
-        background-image: linear-gradient(to right, #9d00ff, #5900ff, #5500f2);
+        background-image: linear-gradient(to right, #7eb7b3, #099288, #7eb7b3);
     }
 
     &:active {
@@ -150,7 +230,8 @@
 }
 
 .login-form__close {
-    display: block;
+    display: none;
+    //display: block;
     position: absolute;
     content: "";
     width: 50px;
@@ -171,4 +252,16 @@
     &:active {
         opacity: 0.5;
     }
+}
+
+.invalid-feedback {
+    display: block;
+    text-align: right;
+    color: red;
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 100;
+}
+
+.is-invalid {
+    border: red 1px solid;
 }

@@ -1,163 +1,167 @@
 .page-header {
-  grid-area: header;
-  display: grid;
-  grid-template: "logo menu" minmax(80px, max-content)
+    width: 90%;
+    margin: 0 auto;
+    background: transparent;
+    grid-area: header;
+    display: grid;
+    grid-template: "logo menu" minmax(80px, max-content)
                   / 32fr 135fr;
-  align-items: center;
-  padding: 25px 0 0;
+    align-items: center;
+    padding: 25px 0 0;
 }
 
 .page-header__logo-link {
-  grid-area: logo;
-  display: block;
-  box-sizing: border-box;
+    grid-area: logo;
+    display: block;
+    box-sizing: border-box;
+    z-index: 100;
 }
 
 .page-header__logo-icon {
-  width: 145px;
-  height: 50px;
+    width: 145px;
+    height: 50px;
 }
 
 .page-header__menu {
-  grid-area: menu;
-  display: grid;
-  grid-template: "navbar social" minmax(80px, max-content)
+    grid-area: menu;
+    display: grid;
+    grid-template: "navbar social" minmax(80px, max-content)
                   / 100fr 35fr;
-  align-items: center;
-  position: relative;
+    align-items: center;
+    position: relative;
 }
 
 .page-header__nav-btn {
-  display: none;
-  position: absolute;
+    display: none;
+    position: absolute;
 }
 
 .page-header__main-nav {
-  grid-area: navbar;
-  display: flex;
-  min-height: 100px;
+    grid-area: navbar;
+    display: flex;
+    min-height: 100px;
 
-  .main-nav__item {
-    min-height: 60px;
-  }
+    .main-nav__item {
+        min-height: 60px;
+    }
 }
 
 .page-header__social {
-  grid-area: social;
-  justify-self: end;
+    grid-area: social;
+    justify-self: end;
 }
 
 @media screen and (max-width: $bp-desktop) {
-  .page-header {
-    grid-template: "logo menu" minmax(100px, max-content)
+    .page-header {
+        grid-template: "logo menu" minmax(100px, max-content)
                   / 20fr 98fr;
-    padding: 25px 0 0;
-  }
+        padding: 25px 0 0;
+    }
 
-  .page-header__menu {
-    grid-area: menu;
-    display: grid;
-    grid-template: "navbar social" minmax(100px, max-content)
+    .page-header__menu {
+        grid-area: menu;
+        display: grid;
+        grid-template: "navbar social" minmax(100px, max-content)
                   / 75fr 40fr;
-    align-items: center;
-    position: relative;
-  }
+        align-items: center;
+        position: relative;
+    }
 
-  .page-header__main-nav {
-    min-height: 60px;
-    justify-items: center;
-  }
+    .page-header__main-nav {
+        min-height: 60px;
+        justify-items: center;
+    }
 }
 
 @media screen and (max-width: $bp-tablets) {
-  .page-header {
-    grid-area: header;
-    display: grid;
-    grid-template: "logo menu" minmax(100px, max-content)
+    .page-header {
+        grid-area: header;
+        display: grid;
+        grid-template: "logo menu" minmax(100px, max-content)
                   / 20fr 48fr;
-    align-items: center;
-    padding: 0;
+        align-items: center;
+        padding: 0;
 
-  }
-
-  .page-header__menu {
-    display: none;
-    //display:flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 325px;
-    height: 100vh;
-    background: #ffffff;
-    z-index: 10;
-  }
-
-  .page-header__main-nav {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-self: start;
-    width: 100%;
-    margin: 100px 0 30px;
-  }
-
-  .page-header__nav-btn {
-    grid-area: nav;
-    display: block;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-
-    right: 40px;
-    top: 40px;
-
-    background: transparent;
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: 8px;
-      width: 24px;
-      height: 4px;
-      background-color: $text-color;
-      box-shadow: 0 8px 0 0 $text-color,
-      0 16px 0 0 $text-color;
     }
 
-    &:hover {
-      cursor: pointer;
-
-      &::after {
-        background-color: $color-lila-hover;
-        box-shadow: 0 8px 0 0 $color-lila-hover,
-        0 16px 0 0 $color-lila-hover;
-      }
+    .page-header__menu {
+        display: none;
+        //display:flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 325px;
+        height: 100vh;
+        background: #ffffff;
+        z-index: 10;
     }
 
-    &:active,
-    &:focus {
-      cursor: pointer;
-
-      &::after {
-        background-color: rgba($bg-color-blue, 0.6);
-        box-shadow: 0 8px 0 0 rgba($bg-color-blue, 0.6),
-        0 16px 0 0 rgba($bg-color-blue, 0.6);
-      }
+    .page-header__main-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-self: start;
+        width: 100%;
+        margin: 100px 0 30px;
     }
-  }
+
+    .page-header__nav-btn {
+        grid-area: nav;
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+
+        right: 40px;
+        top: 40px;
+
+        background: transparent;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 8px;
+            width: 24px;
+            height: 4px;
+            background-color: $text-color;
+            box-shadow: 0 8px 0 0 $text-color,
+            0 16px 0 0 $text-color;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::after {
+                background-color: $color-lila-hover;
+                box-shadow: 0 8px 0 0 $color-lila-hover,
+                0 16px 0 0 $color-lila-hover;
+            }
+        }
+
+        &:active,
+        &:focus {
+            cursor: pointer;
+
+            &::after {
+                background-color: rgba($bg-color-blue, 0.6);
+                box-shadow: 0 8px 0 0 rgba($bg-color-blue, 0.6),
+                0 16px 0 0 rgba($bg-color-blue, 0.6);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $bp-phones) {
-  .page-header {
-    grid-area: header;
-    display: grid;
-    grid-template: "logo nav" minmax(100px, max-content)
+    .page-header {
+        grid-area: header;
+        display: grid;
+        grid-template: "logo nav" minmax(100px, max-content)
       / 20fr 6fr;
-  }
+    }
 
-  .page-header__social {
-    display: none;
-  }
+    .page-header__social {
+        display: none;
+    }
 }
